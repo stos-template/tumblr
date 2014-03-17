@@ -2897,24 +2897,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
         max-height: 16px;
         width: auto;
         vertical-align: middle;
-        -webkit-border-top-right-radius: 2px;
-        -webkit-border-bottom-right-radius: 0;
-        -webkit-border-bottom-left-radius: 0;
-        -webkit-border-top-left-radius: 0;
-        -moz-border-radius-topright: 2px;
-        -moz-border-radius-bottomright: 0;
-        -moz-border-radius-bottomleft: 0;
-        -moz-border-radius-topleft: 0;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-        -moz-background-clip: padding;
-        -webkit-background-clip: padding-box;
-        background-clip: padding-box;
+        @include border-top-right-radius(2px);
+        @include border-top-left-radius(0px);
+        @include border-bottom-right-radius(0px);
+        @include border-bottom-left-radius(0px);
+        @include border-radius(2px);
+        @include background-clip;
         margin-right: 3px;
       }
       blockquote {
@@ -2961,19 +2949,19 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
 @media (-webkit-min-device-pixel-ratio: 2) {
   html, body {
     background-image: url(../images/bg@2x.gif);
-    background-size: 42px 42px;
+    @include background-size(42px 42px);
   }
   .icon-pixiv {
     background-image: url(../images/icon-pixiv@2x.png);
-    background-size: 14px 14px;
+    @include background-size(14px 14px);
   }
   .tag-list {
     background-image: url(../images/pageslide-bg@2x.png);
-    background-size: 256px 256px;
+    @include background-size(256px 256px);
   }
   .flex-direction-nav a {
     background-image: url(../images/bg_direction_nav@2x.png);
-    background-size: 55px 25px;
+    @include background-size(55px 25px);
   }
 }
 
@@ -3088,47 +3076,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
       width: 228px;
       height: 228px;
       margin-right: 10px;
-      -webkit-border-top-right-radius: 3px;
-      -webkit-border-bottom-right-radius: 0;
-      -webkit-border-bottom-left-radius: 0;
-      -webkit-border-top-left-radius: 0;
-      -moz-border-radius-topright: 3px;
-      -moz-border-radius-bottomright: 0;
-      -moz-border-radius-bottomleft: 0;
-      -moz-border-radius-topleft: 0;
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      -moz-background-clip: padding;
-      -webkit-background-clip: padding-box;
-      background-clip: padding-box;
+      @include border-top-right-radius(3px);
+      @include border-top-left-radius(0px);
+      @include border-bottom-right-radius(0px);
+      @include border-bottom-left-radius(0px);
+      @include border-radius(3px);
+      @include background-clip;
     }
     .post_title {
       width: 218px;
       height: 218px;
       margin-right: 10px;
-      -webkit-border-top-right-radius: 3px;
-      -webkit-border-bottom-right-radius: 0;
-      -webkit-border-bottom-left-radius: 0;
-      -webkit-border-top-left-radius: 0;
-      -moz-border-radius-topright: 3px;
-      -moz-border-radius-bottomright: 0;
-      -moz-border-radius-bottomleft: 0;
-      -moz-border-radius-topleft: 0;
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      -moz-background-clip: padding;
-      -webkit-background-clip: padding-box;
-      background-clip: padding-box;
+      @include border-top-right-radius(3px);
+      @include border-top-left-radius(0px);
+      @include border-bottom-right-radius(0px);
+      @include border-bottom-left-radius(0px);
+      @include border-radius(3px);
+      @include background-clip;
       font-size: 120%;
       text-align: left;
     }
@@ -3199,24 +3163,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
     top: 20px;
     left: 13px;
     padding: 7px;
-    -webkit-border-top-right-radius: 3px;
-    -webkit-border-bottom-right-radius: 0;
-    -webkit-border-bottom-left-radius: 0;
-    -webkit-border-top-left-radius: 0;
-    -moz-border-radius-topright: 3px;
-    -moz-border-radius-bottomright: 0;
-    -moz-border-radius-bottomleft: 0;
-    -moz-border-radius-topleft: 0;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
+    @include border-top-right-radius(3px);
+    @include border-top-left-radius(0px);
+    @include border-bottom-right-radius(0px);
+    @include border-bottom-left-radius(0px);
+    @include border-radius(3px);
+    @include background-clip;
     background: #fff;
     i {
       cursor: pointer;
@@ -3233,24 +3185,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
     margin-right: -10px;
     margin-left: -10px;
     .slide-img {
-      -webkit-border-top-right-radius: 0;
-      -webkit-border-bottom-right-radius: 0;
-      -webkit-border-bottom-left-radius: 0;
-      -webkit-border-top-left-radius: 0;
-      -moz-border-radius-topright: 0;
-      -moz-border-radius-bottomright: 0;
-      -moz-border-radius-bottomleft: 0;
-      -moz-border-radius-topleft: 0;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -moz-background-clip: padding;
-      -webkit-background-clip: padding-box;
-      background-clip: padding-box;
+      @include border-top-right-radius(0px);
+      @include border-top-left-radius(0px);
+      @include border-bottom-right-radius(0px);
+      @include border-bottom-left-radius(0px);
+      @include border-radius(0px);
+      @include background-clip;
     }
     height: 200px;
     .slides li {
@@ -3294,47 +3234,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
       width: 95px;
       height: 95px;
       margin-right: 7px;
-      -webkit-border-top-right-radius: 3px;
-      -webkit-border-bottom-right-radius: 0;
-      -webkit-border-bottom-left-radius: 0;
-      -webkit-border-top-left-radius: 0;
-      -moz-border-radius-topright: 3px;
-      -moz-border-radius-bottomright: 0;
-      -moz-border-radius-bottomleft: 0;
-      -moz-border-radius-topleft: 0;
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      -moz-background-clip: padding;
-      -webkit-background-clip: padding-box;
-      background-clip: padding-box;
+      @include border-top-right-radius(3px);
+      @include border-top-left-radius(0px);
+      @include border-bottom-right-radius(0px);
+      @include border-bottom-left-radius(0px);
+      @include border-radius(3px);
+      @include background-clip;
     }
     .post_title {
       width: 85px;
       height: 85px;
       margin-right: 7px;
-      -webkit-border-top-right-radius: 3px;
-      -webkit-border-bottom-right-radius: 0;
-      -webkit-border-bottom-left-radius: 0;
-      -webkit-border-top-left-radius: 0;
-      -moz-border-radius-topright: 3px;
-      -moz-border-radius-bottomright: 0;
-      -moz-border-radius-bottomleft: 0;
-      -moz-border-radius-topleft: 0;
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      -moz-background-clip: padding;
-      -webkit-background-clip: padding-box;
-      background-clip: padding-box;
+      @include border-top-right-radius(3px);
+      @include border-top-left-radius(0px);
+      @include border-bottom-right-radius(0px);
+      @include border-bottom-left-radius(0px);
+      @include border-radius(3px);
+      @include background-clip;
     }
   }
   #footer {
