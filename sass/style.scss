@@ -1836,7 +1836,7 @@ ul.icons-ul {
 .icon-share-sign:before {
   content: "\f14d";
 }
-
+/** leyout **/ 
 body {
   font-family: 'Helvetica Neue',Helvetica,Arial,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
   background: #F6F4F0 url(../images/bg.gif) repeat;
@@ -2933,17 +2933,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
 #footer {
   margin: 30px 0;
   color: #999;
-  -moz-text-shadow: 0 1px 1px #fff;
-  -webkit-text-shadow: 0 1px 1px #fff;
-  text-shadow: 0 1px 1px #fff;
+  @include text-shadow(0 1px 1px #fff);
   font-size: 11px;
+  background-color: #EBE8E3;
   .container {
     margin-top: 0;
     padding-top: 15px;
+    @include box-shadow(inset 0 1px 0 #fff);
     border-top: 1px solid #d5d5d5;
-    -moz-box-shadow: inset 0 1px 0 #fff;
-    -webkit-box-shadow: inset 0 1px 0 #fff;
-    box-shadow: inset 0 1px 0 #fff;
     text-align: right;
   }
   a {
