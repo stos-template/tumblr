@@ -44,33 +44,33 @@ a {
 }
 
 h1 {
-  font-size: 2em;
-  margin: .67em 0;
+  font-size: 32px;
+  margin: 10px 0;
 }
 
 h2 {
-  font-size: 1.5em;
-  margin: .83em 0;
+  font-size: 24px;
+  margin: 13px 0;
 }
 
 h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
+  font-size: 18px;
+  margin: 16px 0;
 }
 
 h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
+  font-size: 16px;
+  margin: 21px 0;
 }
 
 h5 {
-  font-size: .83em;
-  margin: 1.67em 0;
+  font-size: 13px;
+  margin: 26px 0;
 }
 
 h6 {
-  font-size: .75em;
-  margin: 2.33em 0;
+  font-size: 12px;
+  margin: 37px 0;
 }
 
 abbr[title] {
@@ -82,7 +82,7 @@ b, strong {
 }
 
 blockquote {
-  margin: 1em 40px;
+  margin: 16px 40px;
 }
 
 dfn {
@@ -95,20 +95,20 @@ mark {
 }
 
 p {
-  margin: 1em 0;
+  margin: 16px 0;
 }
 
 pre {
-  margin: 1em 0;
+  margin: 16px 0;
   font-family: monospace,serif;
   _font-family: 'courier new',monospace;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 code, kbd, samp {
   font-family: monospace,serif;
   _font-family: 'courier new',monospace;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 pre {
@@ -141,15 +141,15 @@ sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
-  top: -0.5em;
+  top: -8px;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -4px;
 }
 
 dl, menu, ol, ul {
-  margin: 1em 0;
+  margin: 16px 0;
 }
 
 dd {
@@ -233,10 +233,8 @@ input {
     *width: 13px;
   }
   &[type=search] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
+    -webkit-fappearance: textfield;
+    @include box-sizing(content-box);
     &::-webkit-search-decoration, &::-webkit-search-cancel-button {
       -webkit-appearance: none;
     }
@@ -309,10 +307,7 @@ table {
   border-color: #d5d5d5;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   color: #666;
-  background: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(whitesmoke));
-  background: -ms-linear-gradient(top, white, whitesmoke);
-  background: -moz-linear-gradient(top, white 0, whitesmoke 100%);
+  @include background-image(linear-gradient(top, #FFFFFF 0%, #F5F5F5 100%));
   @include border-top-right-radius(3px);
   @include border-top-left-radius(0px);
   @include border-bottom-right-radius(0px);
@@ -321,10 +316,7 @@ table {
   @include background-clip;
   &:hover {
     color: #454545;
-    background: #e6e6e6;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e6e6e6));
-    background: -ms-linear-gradient(top, white, #e6e6e6);
-    background: -moz-linear-gradient(top, white 0, #e6e6e6 100%);
+    @include background-image(linear-gradient(#ffffff, #e6e6e6));
     text-decoration: none!important;
   }
 }
@@ -358,7 +350,7 @@ table {
   position: relative;
   display: inline-block;
   *display: inline;
-  *margin-left: .3em;
+  *margin-left: 4px;
   font-size: 0;
   white-space: nowrap;
   vertical-align: middle;
@@ -418,7 +410,7 @@ table {
   font-style: normal;
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
-  *margin-right: .3em;
+  *margin-right: 4px;
 }
 
 [class^=icon-]:before, [class*=" icon-"]:before {
@@ -477,14 +469,14 @@ ul.icons-ul {
 
 .icon-border {
   border: solid 1px #eee;
-  padding: .2em .25em .15em;
+  padding: 3px 4px 2px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 
 .icon-2x {
-  font-size: 2em;
+  font-size: 32px;
   &.icon-border {
     border-width: 2px;
     -webkit-border-radius: 4px;
@@ -494,7 +486,7 @@ ul.icons-ul {
 }
 
 .icon-3x {
-  font-size: 3em;
+  font-size: 48px;
   &.icon-border {
     border-width: 3px;
     -webkit-border-radius: 5px;
@@ -504,7 +496,7 @@ ul.icons-ul {
 }
 
 .icon-4x {
-  font-size: 4em;
+  font-size: 64px;
   &.icon-border {
     border-width: 4px;
     -webkit-border-radius: 6px;
@@ -514,7 +506,7 @@ ul.icons-ul {
 }
 
 .icon-5x {
-  font-size: 5em;
+  font-size: 80px;
   &.icon-border {
     border-width: 5px;
     -webkit-border-radius: 7px;
@@ -606,14 +598,14 @@ ul.icons-ul {
 
 .btn {
   [class^=icon-].pull-left.icon-2x, [class*=" icon-"].pull-left.icon-2x, [class^=icon-].pull-right.icon-2x, [class*=" icon-"].pull-right.icon-2x {
-    margin-top: .18em;
+    margin-top: 2px;
   }
   [class^=icon-].icon-spin.icon-large, [class*=" icon-"].icon-spin.icon-large {
-    line-height: .8em;
+    line-height: 12px;
   }
   &.btn-small {
     [class^=icon-].pull-left.icon-2x, [class*=" icon-"].pull-left.icon-2x, [class^=icon-].pull-right.icon-2x, [class*=" icon-"].pull-right.icon-2x {
-      margin-top: .25em;
+      margin-top: 4px;
     }
   }
   &.btn-large {
@@ -624,10 +616,10 @@ ul.icons-ul {
       margin-top: .05em;
     }
     [class^=icon-].pull-left.icon-2x, [class*=" icon-"].pull-left.icon-2x {
-      margin-right: .2em;
+      margin-right: 3px;
     }
     [class^=icon-].pull-right.icon-2x, [class*=" icon-"].pull-right.icon-2x {
-      margin-left: .2em;
+      margin-left: 3px;
     }
   }
 }
@@ -635,9 +627,9 @@ ul.icons-ul {
 .icon-stack {
   position: relative;
   display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
   vertical-align: -35%;
   [class^=icon-], [class*=" icon-"] {
     display: block;
@@ -645,13 +637,13 @@ ul.icons-ul {
     position: absolute;
     width: 100%;
     height: 100%;
-    font-size: 1em;
+    font-size: 16px;
     line-height: inherit;
-    *line-height: 2em;
+    *line-height: 32px;
   }
   .icon-stack-base {
-    font-size: 2em;
-    *line-height: 1em;
+    font-size: 32px;
+    *line-height: 16px;
   }
 }
 
@@ -2023,21 +2015,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
     background-size: cover;
     background-position: center 20%;
     background-repeat: no-repeat;
-    -webkit-border-top-right-radius: 3px;
-    -webkit-border-bottom-right-radius: 0;
-    -webkit-border-bottom-left-radius: 0;
-    -webkit-border-top-left-radius: 0;
-    -moz-border-radius-topright: 3px;
-    -moz-border-radius-bottomright: 0;
-    -moz-border-radius-bottomleft: 0;
-    -moz-border-radius-topleft: 0;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    @include border-top-right-radius(3px);
+    @include border-top-left-radius(0px);
+    @include border-bottom-right-radius(0px);
+    @include border-bottom-left-radius(0px);
+    @include border-radius(3px);
+    @include background-clip;
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
@@ -2288,7 +2271,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
     .number {
       font-weight: 400;
       font-size: 90%;
-      margin: 0 1em;
+      margin: 0 16px;
     }
   }
 }
@@ -2370,7 +2353,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
   font-size: 100%;
   line-height: 1.7;
   p {
-    margin: 0 0 1em;
+    margin: 0 0 16px;
   }
   img, video {
     max-width: 100%;
@@ -2380,7 +2363,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
     @include box-shadow(none);
   }
   h1, h2, h3, h4, h5, h6 {
-    margin: 1em 0 .8em;
+    margin: 16px 0 .8em;
     line-height: 1.5;
     font-weight: 400;
   }
@@ -2403,7 +2386,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
     font-size: 100%;
   }
   ul, ol, dd {
-    margin: 0 0 1em 1.5em;
+    margin: 0 0 16px 1.5em;
     padding: 0;
   }
   ul li ul, ol li ul, dd li ul, ul li ol, ol li ol, dd li ol {
@@ -2412,7 +2395,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
   table {
     border-collapse: collapse;
     border-spacing: 0;
-    border-bottom: 1em;
+    border-bottom: 16px;
     th, td {
       border: 1px solid #ddd;
       padding: 5px 10px;
@@ -2474,7 +2457,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
   .amazlet-box {
     border: 1px solid rgba(0, 0, 0, 0.07);
     padding: 15px;
-    margin-bottom: 1em!important;
+    margin-bottom: 16px!important;
     @include border-top-right-radius(4px);
     @include border-top-left-radius(0px);
     @include border-bottom-right-radius(0px);
@@ -2488,7 +2471,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
   .sticky-itslink {
     border: 1px solid rgba(0, 0, 0, 0.07);
     padding: 15px;
-    margin-bottom: 1em;
+    margin-bottom: 16px;
     @include border-top-right-radius(4px);
     @include border-top-left-radius(0px);
     @include border-bottom-right-radius(0px);
@@ -2906,8 +2889,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
         margin-right: 3px;
       }
       blockquote {
-        margin: 1em 1em 1em 0;
-        padding-left: 1em;
+        margin: 16px 16px 16px 0;
+        padding-left: 16px;
         border-left: 3px solid #dfdfdf;
         a {
           font-weight: 400;
